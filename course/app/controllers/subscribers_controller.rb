@@ -36,7 +36,7 @@ class SubscribersController < ApplicationController
     respond_to do |format|
       if @subscriber.save
         SubscriberMailer.registration_confirmation(@subscriber).deliver 
-        format.html { redirect_to @subscriber, notice: 'Registrace proběhla úspěšně. Potvrzení bylo odelsáno na uvedený email.' }
+        format.html { redirect_to @subscriber, notice: 'Registrace proběhla úspěšně. Potvrzení bylo odesláno na uvedený email.' }
         format.json { render :show, status: :created, location: @subscriber }
       else
         format.html { render :new }
