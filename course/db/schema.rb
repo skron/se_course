@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131170908) do
+ActiveRecord::Schema.define(version: 20150203093216) do
 
   create_table "subscribers", force: true do |t|
     t.datetime "created_at"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20150131170908) do
     t.string   "training"
     t.date     "training_date"
     t.string   "training_place"
+    t.string   "nazev"
+    t.integer  "ico"
   end
 
 end

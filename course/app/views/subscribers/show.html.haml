@@ -11,6 +11,9 @@
             - unless flash[:notice].blank?
               #notice.alert.alert-info= notice
             %dl.dl-horizontal
+              %dt Titul:
+              %dd= @subscriber.titul
+
               %dt Jméno:
               %dd= @subscriber.firstname
 
@@ -22,7 +25,49 @@
 
               %dt Telefon:
               %dd= @subscriber.phone
+              
+              %dt Vzdělání
+              %dd= @subscriber.education
 
+              %dt Profese
+              %dd= @subscriber.profesion
+
+              %hr
+
+              %dt Jméno/Název
+              %dd= @subscriber.nazev
+
+              %dt Ulice
+              %dd= @subscriber.address
+
+              %dt Město
+              %dd= @subscriber.city
+
+              %dt PSČ
+              %dd= @subscriber.zip
+
+              %dt IČ
+              %dd= @subscriber.ico
+
+              %hr
+
+              %dt Intro - lektor
+              %dd= @subscriber.intro
+
+              %dt Intro - datum
+              %dd= @subscriber.intro_date
+
+              %dt Výcvik - lektor
+              %dd= @subscriber.training
+
+              %dt Výcvik - datum
+              %dd= @subscriber.training_date
+
+              %dt Výcvik - země
+              %dd= @subscriber.training_place
+
+              %hr
+          
               %dt Účast:
               %dd= @subscriber.participation
 

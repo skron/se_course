@@ -2,19 +2,27 @@
   = f.error_notification
 
   .form-inputs
+    %p
+      Položky označené
+      %abbr *
+      jsou povinné.
+    %hr
     = f.input :titul, label: 'Titul'
     = f.input :firstname, label: 'Jméno', required: :true
     = f.input :lastname, label: 'Příjmení', required: :true
     %hr
     = f.input :email, required: :true
-    = f.input :phone, label: 'Mobil', :as => :tel, required: :true
+    = f.input :phone, label: 'Mobil', :as => :tel, required: :true, placeholder: 'Bez mezer - např. 123456789'
     %hr
+    = f.input :education, label: 'Vzdělání', required: :true, placeholder: 'VŠ, SŠ, obor ...'
+    = f.input :profesion, label: 'Profese', required: :true
+    %hr
+    = f.hint 'Fakturační údaje.'
+    = f.input :nazev, label: 'Jméno/Název', required: :true
     = f.input :address, label: 'Ulice', required: :true
     = f.input :city, label: 'Město', required: :true
-    = f.input :zip, label: 'PSČ', required: :true
-    %hr
-    = f.input :education, label: 'Vzdělání', required: :true
-    = f.input :profesion, label: 'Profese', required: :true
+    = f.input :zip, label: 'PSČ', required: :true, placeholder: 'Bez mezer - např. 12345'
+    = f.input :ico, label: 'IČ'
     %hr
     = f.hint 'Pokud jste již absolvovali Intro k SE, vyplňte následující pole.'
     = f.input :intro, label: 'Intro SE', placeholder: 'Jméno lektora'
@@ -32,5 +40,5 @@
       = link_to "podmínkami registrace", podminky_path, :target => "_blank"
       \.
     %hr
-  .form-actions.col-sm-8.col-sm-offset-4
-    = f.button :submit
+  .form-actions.col-sm-7.col-sm-offset-5
+    = f.button :submit, "Odeslat formulář"

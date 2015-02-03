@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$border-radius-base: 0px;
-$border-radius-large: 0px;
-$border-radius-small: 0px;
+$border-radius-base: 4px;
+$border-radius-large: 4px;
+$border-radius-small: 4px;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -45,6 +45,10 @@ html, body {
 .text-vcenter h2 {
   font-size: 3em;
   color: #fff;
+}
+
+.text-vcenter .btn {
+  margin-top: 48px;
 }
 
 #home {
@@ -247,4 +251,19 @@ img.photo {
   max-width: 100%;
   border: 1px solid #ddd;
   padding: 4px;
+}
+
+p.help-block, .form-horizontal label, .form-horizontal p {
+  font-size: 13px;
+}
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
 }

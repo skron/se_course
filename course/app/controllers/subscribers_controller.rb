@@ -77,6 +77,6 @@ class SubscribersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscriber_params
-      params.require(:subscriber).permit(:firstname, :lastname, :email, :phone, :participation, :titul, :address, :city, :zip, :education, :profesion, :intro, :intro_date, :training, :training_date, :training_place)
+      params.require(:subscriber).permit(:firstname, :lastname, :email, :phone, :participation, :titul, :address, :city, :zip, :education, :profesion, :nazev, :ico, :intro, :intro_date, :training, :training_date, :training_place)
     end
 end
