@@ -54,7 +54,7 @@ html, body {
 }
 
 #home {
-  background: asset_path("tiger_optim.jpg") no-repeat center center fixed; 
+  background: image-url("tiger_optim.jpg") no-repeat center center fixed; 
   display: table;
   height: 100%;
   position: relative;
