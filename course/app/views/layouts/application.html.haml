@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title SE
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,400italic&subset=latin-ext", :rel => "stylesheet", :type => "text/css"}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = yield :head
+  %body.mt-48
+    = render partial: 'welcome/menu'
+    = yield
+    = render partial: 'welcome/footer'

@@ -1,0 +1,124 @@
+.container.program
+  .row
+    .col-md-12.text-center
+      %i.fa.fa-file-text-o.fa-4x
+      %h1.nadpis Program workshopu a cena
+    .col-md-6
+      %p
+        Workshop je rozdělen do dvou částí, přičemž pro účast na workshopu je nutné mít absolvované Intro, nebo výcvik v SE. Intro lze absolvovat před workshopem nebo uznáme dříve absolvovaná Intra.
+      %ol
+        %li Intro - je určeno pro ty, kteří dosud nemají výcvik v metodě SE
+        %li Vlastní workshop
+    .col-md-6
+      %table.table-striped.table-bordered.table
+        %tr
+          %th Intro
+          %th Workshop
+          %th Intro + workshop
+          
+        %tr
+          %td 9.7.2015
+          %td 10. - 12.7.2015
+          %td 9. - 12.7.2015
+
+        %tr
+          %td Pro ty chtějí jenom Intro
+          %td Pro ty co už mají intro
+          %td Pro ty dosud nemají intro
+
+        %tr
+          %td 2 500 Kč
+          %td 8 500 Kč
+          %td 10 500 Kč
+  .row
+    .col-md-12.text-center
+      %h2 Detailní informace
+    .col-md-12
+      %div{:role => "tabpanel"}
+        / Nav tabs
+        %ul#tabs.nav.nav-tabs{:role => "tablist"}
+          %li.active{:role => "presentation"}
+            %a{"aria-controls" => "intro", "data-toggle" => "tab", :href => "#intro", :role => "tab"} Intro
+          %li{:role => "presentation"}
+            %a{"aria-controls" => "workshop", "data-toggle" => "tab", :href => "#workshop", :role => "tab"} Workshop
+          %li{:role => "presentation"}
+            %a{"aria-controls" => "maggie", "data-toggle" => "tab", :href => "#maggie", :role => "tab"} Maggie Kline
+        / Tab panes
+        .tab-content
+          #intro.tab-pane.active{:role => "tabpanel"}
+            .col-sm-6
+              %h3
+                Intro
+              %ul
+                %li  
+                  Úvod do základů metody SE je jednodenní workshop určený pro všechny zájemce o třídenní workshop 
+                  %strong Práce s traumatem u dětí,
+                  kteří nemají žádný výcvik v této metodě. Absolvování tohoto úvodu je podmínkou pro účast na třídenním workshopu Práce s traumatem u dětí.
+                %li Seznámíte se s teorií, základními principy a metodami somatického prožívání dle Petera Levina.
+                %li Účast na Intru lze využít také jako Ǔvodní seminář pro zájemce o tříletý výcvik v Somatickém prožívání.
+                %li Cena samotného Intra 2500,-
+                %li Cena za Intro + Workshop Práce s traumatem u dětí 10500,-
+            .col-sm-6
+              %h3
+                SE
+              %p
+                %strong
+                  Somatic Experiencing
+                  %sup &reg;
+                  \/ Somatické prožívání
+                je jedním z nejefektivnějších nástrojů pro léčení traumatu vyučovaný po celém světě. Je to přístup umožňující terapeutovi provést klienta náročnými stavy a situacemi. Somatické prožívání není jen psychoterapeutická metoda, ale velmi specifická práce s tělem a nervovým systémem. Nabízí základní přístup k porozumění a zvládání následků šoku a traumatu. Metoda tělesného prožívání umožňuje dokončení vrozených obranných reakcí nervového systému, které směřují k obnovení rovnováhy systému. Somatické prožívání nabízí nástroje, jak projít traumatem a žít plnohodnotným a jistějších životem a podporuje uvolnění posttraumatického stresu. 
+                %br
+                = link_to 'www.somatic-experiencing.cz', :href => 'http://somatic-experiencing.cz/'
+          #workshop.tab-pane{:role => "tabpanel"}
+            .col-sm-12
+              %h3
+                Workshop
+            .col-sm-6
+              %ul
+                %li
+                  Třídenní workshop 
+                  %strong Práce s traumatem u dětí, 
+                  je určen pro ty, kteří absolvovali Intro - Úvod do základů metody somatického prožívání nebo již mají výcvik v této metodě.
+                  %ul
+                    %li seznámíte se s tématiku vývojoých stádií dítěte z hlediska somatického prožívání 
+                    %li dozvíte se jak napravit rané trauma a attachment a skrze sociální kontakt obnovit seberegulaci
+                    %li vyzkoušíte si techniky které napomáhají prohloubení uzemnění, smyslového vnímání a nástroje pro trackování u dětí a dospívajících
+                    %li ukážeme si jak lze využít propojení principů SE s výtvarnými tehnikami k podpořit pocit bezpečí skrze titraci a pendulaci
+                    %li Maggie bude učit jak přeměnit hru v SE aktivity s prvky cyklů nabití/vybití, které mohou dětem pomoci s trackováním, orientací, reakcí útoku/útěku, vybudováním hranic a integrací jejich rozrušení 
+                    %li dotkneme se specifických témat Sexuálního traumatu, traumat způsobených lékařskými zákroky, stavech po nehodách či v důsledku ztráty
+                    %li workshop zahrnuje teorii, videonahrávky i sebezkušenostní prožikové techniky využitelné pro individuální i skupinové práce s dětmi
+                %li workshop je určn pro psychology, pedagogy, terapeuty,rodiče a všechny kdo pracují s dětmi a také pro ty, kdo chtějí prohloubit své porozumění při práci s vnitřním dítětem u dospělých 
+                %li Zajištěn překlad z AJ do ČJ
+                %li Cena samotného třídenního workshopu je 8500,-
+                %li Cena za Intro + Workshop Práce s traumatem u dětí 10500,-
+            .col-sm-6
+              %p
+                %strong Maggie Kline 
+                bude na svém třídenní workshopu 
+                %strong Práce s traumatem u dětí
+                učit jak využít herních technik a tvoření v kombinaci s metodou somatického prožívání, tak, abychom dětem pomohli znovu se navrátit k rovnováze poté, co zažily strach a pocit přehlcení. Při své práci klade Maggie důraz na to, aby byly tyto principy využívány praktickým způsobem tak, aby mohly být naplněny specifické potřeby dětí v různých stádiích vývoje. Při terapii SE a hře je tak dětem umožněno, aby mohly uvolnit své napětí v atmosféře bezpečí a skrze přítomnost klidného a konejšivého dospělého a mohly tak obnovit důvěru v sebe a okolní svět.
+          #maggie.tab-pane{:role => "tabpanel"}
+            .col-sm-12
+              %h3
+                Maggie Kline
+            .col-sm-2
+              = image_tag ('maggie_klein.jpeg'), :class => "photo"
+            .col-sm-10
+              %p
+                %strong Maggie Kline
+                se téměř třicet let věnuje praxi v oblasti párové, rodinné a dětské terapie na Long Beach v Kalifornii a má dlouholeté zkušenosti jako učitelka a školní psycholožka. Vychází z oblasti humanistické psychoterapie, rodinných systémů a Gestalt psychoterapie s doplňkovým výcvikem v práci s tělem. Maggie je specialistkou na metodu 
+                %strong Somatic Experiencing (SE),
+                léčení traumatu pomocí práce s tělem a nervovým systémem, také studovala Bodynamic terapii a metodu EMDR.
+              %p
+                Při terapii s dětmi a dospívajícími integruje Maggie Kline metodu Somatic Experiencing  s uměním a  hrou. Je senior instruktorkou Somatic Experiencing trauma Institutu
+                =link_to 'www.traumahealing.com', 'http://www.traumahealing.com'
+                v  USA, Asii a Austrálii. V Evropě , Brazílii a Kanadě vede workshopy “Conscious Connections” a “SE for Kids”, určené pro odborníky pracující v pomáhajících profesích s dětmi, v oblasti výchovy a školství a pro rodiče. 
+              %p
+                Maggie také vedla první tým dobrovolníků prasujících s SE v Thajsku po zásahu tsunami v Indickém oceánu v roce 2004 a vedla veřejný workshop po norském masakru v roce 2011. Přednášela na mezinárodních konferencích zaměřených na terapii hrou a trauma v Evropě a USA.  
+              %p
+                Spolu s Peterem Levinem napsala knihy 
+                =link_to 'Trauma očima dítěte: Probouzení obyčejného zázraku léčení (Maitrea, 2012)', 'http://www.maitrea.cz/nakladatelstvi/trauma-ocima-ditete'
+                a
+                =link_to 'Prevence traumatu u dětí (Maitrea, 2014)', 'http://www.maitrea.cz/nakladatelstvi/prevence-traumatu-u-deti'
+                \. A je také spoluautorkou článku It Won't Hurt Forever--Guiding Your Child through Trauma (časopis Mothering, 2002). Nejnovějším projektem Maggie bylo 15 videorozhovorů, které byly natočeny a jsou zdarma k dispozici pro rodiče, aby mohli pomáhat svým dětem vyrovnat se s traumatem a ztrátou www.kidsinthehouse.com (2013).
+          

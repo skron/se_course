@@ -1,0 +1,30 @@
+.container-fluid
+  .row
+    .col-md-4.col-md-offset-4
+      .panel.panel-default
+        .panel-heading
+          %h1
+            Registrovaný
+            = @subscriber.firstname + ' ' + @subscriber.lastname
+        .panel-body
+          .col-md-12
+            - unless flash[:notice].blank?
+              #notice.alert.alert-info= notice
+            %dl.dl-horizontal
+              %dt Jméno:
+              %dd= @subscriber.firstname
+
+              %dt Příjmení:
+              %dd= @subscriber.lastname
+
+              %dt Email:
+              %dd= @subscriber.email
+
+              %dt Telefon:
+              %dd= @subscriber.phone
+
+              %dt Účast:
+              %dd= @subscriber.participation
+
+        .panel-footer
+          

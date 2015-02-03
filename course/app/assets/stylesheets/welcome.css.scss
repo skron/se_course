@@ -1,0 +1,250 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vcenter > .inside {
+  margin: 0 48px;
+  padding: 48px 0;
+  background-color: rgba(206, 129, 71, 0.5);
+}
+
+.text-vcenter h1,.text-vcenter h2 {
+  font-size: 3em;
+  line-height: 1.5em;
+  font-weight: 700;
+  margin: 0;
+  color: white; 
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+
+.text-vcenter h1 > span {
+  font-size: 0.7em;
+}
+
+.text-vcenter h2 {
+  font-size: 3em;
+  color: #fff;
+}
+
+#home {
+  background: url(tiger.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home h2 {
+  text-transform: uppercase;
+}
+
+.home h2 > span {
+  display: block;
+  font-size: 18px;
+  margin-top: 24px;
+  text-transform: none;
+}
+
+.uvod h2 {
+  color: #3cb6b6;
+}
+
+.uvod i, .program i {
+  margin-top: 48px;
+  border: 3px solid #f5f5f5;
+  border-radius: 50%;
+  padding: 24px;
+  color: rgba(206, 129, 71, 1);
+}
+
+.mt-48 {
+  margin-top: 50px;
+}
+
+.navbar-nav > li > a {
+  line-height: 24px;
+  font-size: 15px;
+}
+
+/* buttons, messages, forms ---------------------- */
+ 
+body {
+  margin: 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px !important;
+  background-color: #ffffff;
+}
+
+a {
+  color: #3cb6b6;
+} 
+
+a, a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+p, ul, ol {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 24px !important;
+}
+
+ul, ol {
+  padding-left: 15px;
+}
+
+ul li > ul, ol  li > ol {
+  padding-left: 30px;
+}
+
+.podminky p {
+  margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+  margin: 24px 0 24px 0;
+  text-shadow: none;
+}
+
+h1.nadpis {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.nadpis:after {
+  border-radius: 4px;
+  bottom: -0.7em;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
+  background-color: #3cb6b6;
+}
+
+.navbar-default {
+  background: #3cb6b6;
+  border-bottom: rgba(64,150,238,1);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    0px 5px 10px 0px rgba(50, 50, 50, 0.2);
+  box-shadow:         0px 1px 10px 0px rgba(50, 50, 50, 0.35);
+}
+
+.navbar-brand {
+  padding: 15px 10px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color: #d6edff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 8px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  background-color: #acd7ec !important;
+  color: rgba(63,76,107,1);
+}
+
+.panel {
+  margin: 48px 0 !important;
+  background-color: #fafafa;
+  border-color: #cdcdcd;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 1px 10px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.2);
+}
+
+.panel-heading, .panel-footer {
+  background-color: #3cb6b6 !important;
+  border-color: #cdcdcd !important;
+}
+
+.panel-heading > h1 {
+  font-size: 16px !important;
+  margin: 0 !important;
+  padding-left: 0;
+  color: #ffffff;
+}
+
+.dl-horizontal dt, dd {
+  line-height: 24px !important;
+}
+
+.table-bordered {
+  background-color: #fafafa;
+}
+
+.table-bordered, .table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td {
+  border: 1px solid #cdcdcd;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+  border-bottom-width: 1px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) {
+  background-color: #f2f2f2;
+}
+
+.table > thead > tr > th {
+  vertical-align: top;
+}
+
+.form-horizontal > .form-inputs > span {
+  display: block;
+}
+
+.form-control {
+  font-size: 13px;
+}
+
+footer {
+  background-color: #f1f1f1;
+  margin: 48px 0 0;
+  padding: 24px 0 0;
+}
+
+#tabs > li > a {
+  font-size: 16px;
+}
+
+img.photo {
+  max-width: 100%;
+  border: 1px solid #ddd;
+  padding: 4px;
+}

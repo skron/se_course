@@ -1,0 +1,36 @@
+= simple_form_for(@subscriber, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, wrapper_mappings: {check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :titul, label: 'Titul'
+    = f.input :firstname, label: 'Jméno', required: :true
+    = f.input :lastname, label: 'Příjmení', required: :true
+    %hr
+    = f.input :email, required: :true
+    = f.input :phone, label: 'Mobil', :as => :tel, required: :true
+    %hr
+    = f.input :address, label: 'Ulice', required: :true
+    = f.input :city, label: 'Město', required: :true
+    = f.input :zip, label: 'PSČ', required: :true
+    %hr
+    = f.input :education, label: 'Vzdělání', required: :true
+    = f.input :profesion, label: 'Profese', required: :true
+    %hr
+    = f.hint 'Pokud jste již absolvovali Intro k SE, vyplňte následující pole.'
+    = f.input :intro, label: 'Intro SE', placeholder: 'Jméno lektora'
+    = f.input :intro_date, label: 'Rok absolvování', :start_year => Date.current.year, :end_year => 1994, discard_day: true,discard_month: true, placeholder: 'Rok absolvování Intra'
+    %hr
+    = f.hint 'Pokud jste již absolvovali výcvik v SE, vyplňte následující pole.'
+    = f.input :training, label: 'Výcvik SE', placeholder: 'Jméno lektora'
+    = f.input :training_date, label: 'Rok absolvování', :start_year => Date.current.year, :end_year => 1994, discard_day: true,discard_month: true, placeholder: 'Rok absolvování výcviku'
+    = f.input :training_place, label: 'Místo výcviku', placeholder: 'Země absolvování výcviku (např. ČR, ...)'
+    %hr
+    = f.input :participation, label: 'Zůčatním se:',  as: :radio_buttons, :collection => [['Intro (2 500 Kč)', 'Intro'],['Workshop (8 500 Kč)', 'Workshop'],['Intro + workshop (10 500 Kč)', 'Intro + workshop']], required: :true
+    %hr
+    %p.text-right
+      Odesláním tohoto formuláře souhlasíte s 
+      = link_to "podmínkami registrace", podminky_path, :target => "_blank"
+      \.
+    %hr
+  .form-actions.col-sm-8.col-sm-offset-4
+    = f.button :submit

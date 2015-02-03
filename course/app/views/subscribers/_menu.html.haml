@@ -1,0 +1,12 @@
+= navbar fixed: :top do
+  = navbar_header brand: "SE course", brand_link: root_path
+  = navbar_collapse do
+    = navbar_group class: 'mainmenu pull-left', id: 'menu' do
+      = navbar_item root_path do
+        %span.glyphicon.glyphicon-home
+      = navbar_item new_subscriber_path do
+        Registrace
+    = navbar_group align: 'right' do
+      = navbar_item subscribers_path do
+        Login
+

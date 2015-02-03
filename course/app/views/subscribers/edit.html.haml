@@ -1,0 +1,14 @@
+.container-fluid
+  .row
+    .col-md-4.col-md-offset-4
+      .panel.panel-default
+        .panel-heading
+          %h1
+            Editace uživatele:
+            %strong
+              = @subscriber.firstname + ' ' + @subscriber.lastname
+        .panel-body
+          .col-md-12
+            = render 'form'
+        .panel-footer
+        

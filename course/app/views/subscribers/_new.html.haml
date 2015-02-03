@@ -1,0 +1,11 @@
+= simple_form_for(@subscriber, html: { class: 'form-horizontal' }, wrapper: :horizontal_form, wrapper_mappings: {check_boxes: :horizontal_radio_and_checkboxes, radio_buttons: :horizontal_radio_and_checkboxes, file: :horizontal_file_input, boolean: :horizontal_boolean}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :presta_id, :readonly => true
+    = f.input :product_name
+    = f.input :tag, hint: I18n.t("separated")
+    
+  .form-actions
+    .col-md-8.col-md-offset-4
+      = f.button :submit, :class => "btn btn-success"
