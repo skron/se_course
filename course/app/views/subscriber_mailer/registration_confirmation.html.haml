@@ -10,27 +10,26 @@
 
 %p
   = "Zvolili jste variantu: #{@subscriber.participation}"
-  - a = ["#{@subscriber.participation}"]
-  - case a
-  - when 'Intro'
-    //- if @subscriber.participation.include?("Intro")
-    =render partial: 'intro', formats: :html
-  - when 'Workshop'
-    //- elsif @subscriber.participation.include?("Workshop")
-    =render partial: 'workshop', formats: :html
-  - when 'Intro + Workshop'
-    //- elsif @subscriber.participation.include?("Intro + workshop")
-    =render partial: 'intro_workshop', formats: :html
+  //- a = @subscriber.participation
+  - case @subscriber.participation
+  - when "Intro"
+    =render partial: 'intro'
+  - when "Workshop"
+    =render partial: 'workshop'
+  - when "Intro + workshop"
+    =render partial: 'intro_workshop'
 
 %p 
   Příslušnou zálohu zašlete na účet č.: 
   %strong 123123123/123
   nejpozději 
   %strong do 30.4.2015.
+  %br
   Doplatek kurzovného zašlete na účet č.: 
   %strong 123123123/123 
   nejpozději 
   %strong do 15.6. 2015.
+  %br
   Jako 
   %strong variabilní symbol
   obou plateb uveďte své 
@@ -42,9 +41,11 @@
 %ol
   %li
     %strong Absolvování Intra
+    %br
     Pro účast na workshopu je povinné absolvování Intra nebo jiná předchozí zkušenost s metodou SE (Intro nebo výcvik).
   %li
     %strong Zrušení workshopu
+    %br
     Při nedostatečném počtu účastníků si organizátoři vyhrazují právo na zrušení workshopu. Rozhodné datum je stanoveno na 10.5.2015. Pokud by došlo ke zrušení workshopu ze strany organizátorů, vybrané zálohy budou účastníkům vráceny.
   %li
     Úplné znění podmínek naleznete na adrese
