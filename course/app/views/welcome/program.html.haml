@@ -1,7 +1,8 @@
 .container.program
   .row
     .col-md-12.text-center
-      %i.fa.fa-file-text-o.fa-4x
+      .icon-wrapper
+        %i.fa.fa-file-text-o
       %h1.nadpis Program workshopu a cena
     .col-md-6
       %p
@@ -30,10 +31,13 @@
           %td 2 500 Kč
           %td 8 500 Kč
           %td 10 500 Kč
+.container-fluid.info
   .row
-    .col-md-12.text-center
-      %h2 Detailní informace
-    .col-md-12
+    .col-md-10.col-md-offset-1.text-center
+      .icon-wrapper
+        %i.fa.fa-file-text-o
+      %h1.nadpis Detailní informace
+    .col-md-10.col-md-offset-1
       %div{:role => "tabpanel"}
         / Nav tabs
         %ul#tabs.nav.nav-pills{:role => "tablist"}
