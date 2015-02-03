@@ -1,7 +1,7 @@
 class SubscribersController < ApplicationController
   before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "workshopmaggieklein", password: "Budapest2014", except: [:new, :create, :show]
+  http_basic_authenticate_with name: "workshopmaggiekline", password: "Budapest2014", except: [:new, :create, :show]
 
   # GET /subscribers
   # GET /subscribers.json
