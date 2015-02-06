@@ -1,4 +1,4 @@
-#home.home.mt-48
+#home.home
   .text-vcenter
     .inside
       %h1
@@ -16,10 +16,8 @@
         %br
         Karlova 25, Praha 1
       = link_to 'registrace zde', new_subscriber_path, :class => 'btn btn-lg btn-success'
-      %h4
-        další info
-        %br
-        %i.fa.fa-angle-double-down
+  #scroll-down
+    %i.fa.fa-angle-double-down
 .container.home
   .row.uvod
     .col-md-4.text-center
@@ -31,7 +29,10 @@
           Úvod do metody Somatic Experiencing
           %sup &reg;
       %p
-        %strong Somatic Experiencing/Somatické prožívání
+        %strong
+          Somatic Experiencing
+          %sup &reg;
+          \/ Somatické prožívání
         je velmi efektivní přístup umožňující léčení traumatu, který je vyučovaný po celém světě.
       %p
         Jednodenní workshop, na kterém se seznámíte se základními metodami somatického prožívání. Je určen pro všechny zájemce o třídenní workshop  

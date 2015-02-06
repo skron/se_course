@@ -41,7 +41,7 @@ html, body {
 }
 
 .text-vcenter h1 > span {
-  font-size: 0.6em;
+  font-size: 0.5em;
 }
 
 .text-vcenter h2 {
@@ -53,12 +53,33 @@ html, body {
   margin-top: 48px;
 }
 
-#home {
-  background: image-url("tiger_optim.jpg") no-repeat center center fixed; 
+#home, #program, #podminky {
+  background: image-url("tiger_optim.jpg") no-repeat center bottom fixed; 
   display: table;
-  height: 100%;
+  height: 98%;
   position: relative;
   width: 100%;
+  border-bottom: 2px solid #3cb6b6;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#program, #podminky {
+  height: 200px;
+}
+
+#program {
+  background: image-url("tiger_2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#podminky {
+  background: image-url("tiger_3.jpg") no-repeat center bottom fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -103,6 +124,24 @@ html, body {
   margin-top: 48px;
   margin-bottom: -48px;
   padding: 0 0 48px 0;
+}
+
+#scroll-down {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  margin-top: -48px;
+  margin-left: -24px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 48px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #3cb6b6;
+  color: #ffffff;
 }
 
 .mt-48 {
@@ -271,6 +310,10 @@ footer {
   background-color: #f1f1f1;
   margin-top: 48px;
   padding: 24px 0 0;
+}
+
+a.login {
+  color: #ddd;
 }
 
 #tabs > li > a {
