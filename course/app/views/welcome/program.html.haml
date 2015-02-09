@@ -4,8 +4,6 @@
 .container.program
   .row
     .col-md-12.text-center
-      .icon-wrapper
-        %i.fa.fa-file-text-o
       %h1.nadpis Program workshopu a cena
     .col-md-6
       %p
@@ -39,8 +37,6 @@
 .container-fluid.info
   .row
     .col-md-10.col-md-offset-1.text-center
-      .icon-wrapper
-        %i.fa.fa-file-text-o
       %h1.nadpis Detailní informace
     .col-md-10.col-md-offset-1
       %div{:role => "tabpanel"}
@@ -60,11 +56,12 @@
                 Intro
               %ul
                 %li  
-                  Úvod do základů metody SE je jednodenní workshop určený pro všechny zájemce o třídenní workshop 
+                  Intro - úvod do základů metody SE, je jednodenní workshop určený pro všechny zájemce o třídenní workshop 
                   %strong Práce s traumatem u dětí,
                   kteří nemají žádný výcvik v této metodě. Absolvování tohoto úvodu je podmínkou pro účast na třídenním workshopu Práce s traumatem u dětí.
                 %li Seznámíte se s teorií, základními principy a metodami somatického prožívání dle Petera Levina.
                 %li Účast na celém programu lze využít také jako Úvodní seminář pro zájemce o tříletý výcvik v Somatickém prožívání.
+                = link_to 'www.somatic-experiencing.cz', 'http://somatic-experiencing.cz/'
             .col-sm-6
               %h3
                 SE
@@ -72,10 +69,17 @@
                 %strong
                   Somatic Experiencing
                   %sup &reg;
-                  \/ Somatické prožívání
-                je jedním z nejefektivnějších nástrojů pro léčení traumatu vyučovaný po celém světě. Je to přístup umožňující terapeutovi provést klienta náročnými stavy a situacemi. Somatické prožívání není jen psychoterapeutická metoda, ale velmi specifická práce s tělem a nervovým systémem. Nabízí základní přístup k porozumění a zvládání následků šoku a traumatu. Metoda tělesného prožívání umožňuje dokončení vrozených obranných reakcí nervového systému, které směřují k obnovení rovnováhy systému. Somatické prožívání nabízí nástroje, jak projít traumatem a žít plnohodnotným a jistějších životem a podporuje uvolnění posttraumatického stresu. 
-                %br
-                = link_to 'www.somatic-experiencing.cz', 'http://somatic-experiencing.cz/'
+                  \/ Somatické prožívání (SE)
+                je jedním z nejefektivnějších nástrojů pro léčení traumatu vyučovaný po celém světě. Je to přístup umožňující terapeutovi provést klienta náročnými stavy a situacemi. Somatické prožívání je specifická metoda práce s tělem a nervovým systémem. Nabízí základní přístup k porozumění a zvládání následků šoku a traumatu. Metoda tělesného prožívání umožňuje dokončení vrozených obranných reakcí nervového systému, které směřují k obnovení rovnováhy systému. Somatické prožívání pracuje přímo s autonomním nervovým systémem klienta a s instinktivními reakcemi organismu. Skrze práci s pociťovaným smyslem, umožňuje rozvinutí schopnosti uvědomit si a zpracovat vlastní stresové reakce
+    Sadu dovedností pro péči o sebe a sebe-regulaci
+    Užití těchto dovedností u klienta
+ nabízí nástroje, jak projít traumatem a žít plnohodnotným a jistějších životem a podporuje uvolnění posttraumatického stresu. 
+                %ul
+                  %li= link_to 'www.somatic-experiencing.cz', 'http://somatic-experiencing.cz/'
+                  %li= link_to 'www.traumahealing.com', 'http://traumahealing.com/'
+                  %li= link_to 'www.se-europe.info', 'http://se-europe.info/'
+                  %li= link_to 'www.stephenporges.com', 'http://stephenporges.com/'
+                  %li= link_to 'www.somaticexperiencing.com', 'http://somaticexperiencing.com/'
           #workshop.tab-pane{:role => "tabpanel"}
             .col-sm-12
               %h3
@@ -126,6 +130,8 @@
                 Spolu s Peterem Levinem napsala knihy 
                 =link_to 'Trauma očima dítěte: Probouzení obyčejného zázraku léčení (Maitrea, 2012)', 'http://www.maitrea.cz/nakladatelstvi/trauma-ocima-ditete'
                 a
-                =link_to 'Prevence traumatu u dětí (Maitrea, 2014)', 'http://www.maitrea.cz/nakladatelstvi/prevence-traumatu-u-deti'
-                \. A je také spoluautorkou článku It Won't Hurt Forever--Guiding Your Child through Trauma (časopis Mothering, 2002). Nejnovějším projektem Maggie bylo 15 videorozhovorů, které byly natočeny a jsou zdarma k dispozici pro rodiče, aby mohli pomáhat svým dětem vyrovnat se s traumatem a ztrátou www.kidsinthehouse.com (2013).
+                =link_to 'Prevence traumatu u dětí (Maitrea, 2014).', 'http://www.maitrea.cz/nakladatelstvi/prevence-traumatu-u-deti'
+                A je také spoluautorkou článku It Won't Hurt Forever--Guiding Your Child through Trauma (Nebude to bolet navždy - jak provést vaše dítě traumatem: časopis Mothering, 2002). Nejnovějším projektem Maggie bylo 15 videorozhovorů, které byly natočeny a jsou zdarma k dispozici pro rodiče, aby mohli pomáhat svým dětem vyrovnat se s traumatem a ztrátou 
+                =link_to 'www.kidsinthehouse.com', 'http://www.kidsinthehouse.com' 
+                (2013).
           
