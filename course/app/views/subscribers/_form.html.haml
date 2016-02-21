@@ -33,10 +33,10 @@
     = f.input :training_date, label: 'Rok absolvování', :start_year => Date.current.year, :end_year => 1994, discard_day: true,discard_month: true, placeholder: 'Rok absolvování výcviku'
     = f.input :training_place, label: 'Místo výcviku', placeholder: 'Země absolvování výcviku (např. ČR, ...)'
     %hr
-    = f.input :participation, label: 'Zůčastním se:',  as: :radio_buttons, :collection => [['Intro (2 500 Kč)', 'Intro'],['Workshop (8 500 Kč)', 'Workshop'],['Intro + workshop (10 500 Kč)', 'Intro + workshop']], required: :true
+    = f.input :participation, label: 'Zůčastním se:',  as: :radio_buttons, :collection => [['Intro (2 500 Kč)', 'Intro'],['Workshop (8 900 Kč)', 'Workshop'],['Intro + workshop (11 000 Kč)', 'Intro + workshop']], required: :true
     %hr
     %p.text-right
-      Odesláním tohoto formuláře souhlasíte s 
+      Odesláním tohoto formuláře souhlasíte s
       = link_to "podmínkami registrace", podminky_path, :target => "_blank"
       \.
     %hr
