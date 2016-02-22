@@ -1,81 +1,65 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Potvrzení registrace
-    :css
-      body, p, ol, td, th {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px !important;
-        line-height: 24px !important;
-        color: #808080;
-        background-color: #FFFFFF;
-      }
-      h4  {font-family: Arial, Helvetica, sans-serif; font-style: normal; margin: 24px 0; color: #f36248;}
-      strong  {font-weight: bold}
-  %body{:leftmargin => "0", :marginheight => "0", :marginwidth => "0", :offset => "0", :topmargin => "0"}
-    %div{:align => "center"}
-      %table{:align => "center", :style => "width: 700px"}
-        %tbody
-          %tr
-            %td{:align => "left"}
-              %p
-                Vážený pane/paní
-                = @subscriber.lastname
-                \,
-                %br/
-  děkujeme za Vaši registraci na workshop s Maggie Kline Práce s traumatem u dětí 28.-31.7. 2016 v Praze. Níže Vám posíláme informace k platbě a podmínky účasti.
-                děkujeme za Vaši registraci na
-                %strong workshop s Maggie Kline - Práce s traumatem u dětí.
-                %br/
-          %tr
-            %td{:align => "left"}
 %p
-  Celé kurzovné nebo příslušnou zálohu zašlete na účet č.:
-  nejpozději
-  Pokud jste se rozhodli pro platbu zálohy, doplatek kurzovného zašlete na účet č.:
-  nejpozději
-  Jako
-  obou plateb uveďte své
-              %p
-                Kurz je již bohužel naplněn, zařazujeme Vás tedy do seznamu náhradníků, a kontaktujeme Vás po 30.4., což je termín pro zaplacení záloh a po tomto termínu budeme mít přehled o počtu míst, která se uvolnila.
-              %br/
-          %tr
-            %td{:align => "left"}
+  Vážený pane/paní
+  = @subscriber.lastname
+  \,
+  %br
+  děkujeme za Vaši registraci na workshop s Maggie Kline Práce s traumatem u dětí 28.-31.7. 2016 v Praze. Níže Vám posíláme informace k platbě a podmínky účasti.
 
 %p
-                V PŘÍPADĚ ZÁJMU VÁM NABÍZÍME MOŽNOST ZŮČASTNIT SE JEDNODENNÍHO INTRA, KDE JSOU STÁLE VOLNÁ MÍSTA. POKUD SE CHCETE INTRA ZÚČASTNIT NAPIŠTE NÁM PROSÍM NA TENTO MAIL.
-          %tr
-            %td{:align => "left"}
-              %p
-                Vaše dotazy ke kurzu i platbám směřujte na email
-                = succeed "." do
-                  %a{:href => "mailto:workshopmaggiekline@gmail.com"} workshopmaggiekline@gmail.com
-      %table{:align => "center", :style => "width: 700px"}
-        %tbody
-          %tr
-            %td{:align => "center", :colspan => "3"}
-              \-----
-          %tr
-            %td{:align => "center", :colspan => "3"}
+  %strong CENA WORKSHOPU A PLATBY:
+
+%p
+  = "Zvolili jste variantu: #{@subscriber.participation}"
+  //- a = @subscriber.participation
+  - case @subscriber.participation
+  - when "Intro"
+    =render partial: 'intro'
+  - when "Workshop"
+    =render partial: 'workshop'
+  - when "Intro + workshop"
+    =render partial: 'intro_workshop'
+
+%p
+  Celé kurzovné nebo příslušnou zálohu zašlete na účet č.:
+  %strong 2500029896/2010
+  nejpozději
+  %strong do 30.4.2016.
+  %br
+  Pokud jste se rozhodli pro platbu zálohy, doplatek kurzovného zašlete na účet č.:
+  %strong 2500029896/2010
+  nejpozději
+  %strong do 15.6. 2016.
+  %br
+  Jako
+  %strong variabilní symbol
+  obou plateb uveďte své
+  %strong telefoní číslo.
+
+%p
+  %strong PODMÍNKY:
+
+%ol
+  %li
+    %strong Absolvování Intra
+    %br
+    Pro účast na workshopu je povinné absolvování Intra nebo jiná předchozí zkušenost s metodou SE (Intro nebo výcvik).
+  %li
+    %strong Zrušení workshopu
+    %br
+    Při nedostatečném počtu účastníků si organizátoři vyhrazují právo na zrušení workshopu. Rozhodné datum je stanoveno na 10.5.2016. Pokud by došlo ke zrušení workshopu ze strany organizátorů, vybrané zálohy budou účastníkům vráceny.
+  %li
+    Úplné znění podmínek naleznete na adrese
+    = link_to "http://secourse.cz/podminky", "http://secourse.cz/podminky"
+
+
+%p
+  Podrobnější informace k harmonogramu obdržíte na Váš mail v pozvánce před konáním worksopu. Vaše dotazy ke kurzu i platbám směřujte taktéž na tento mail.
+%p
+  Na setkání s Vámi se těší tým organizátorek:
 %p
   %strong Ing. Zlata Koštejnová:
   tel 777 626 514,
   %strong Mgr. Michaela Čápová:
-              \-----
+  tel 739 019 623
   %strong a Mgr. Tereza Koryntová:
-            %td{:align => "center"}
-              %strong Ing. Zlata Koštejnová
-              %br/
-              777 626 514
-              %br/
-            %td{:align => "center"}
-              %strong Mgr. Michaela Čápová
-              %br/
-              739 019 623
-              %br/
-            %td{:align => "center"}
-              %strong Mgr. Tereza Koryntová
-              %br/
-              732 743 818
-              %br/
+  tel 732 743 818
