@@ -81,7 +81,7 @@ Rails.application.configure do
     :port                 => 587,
     :domain               => "gmail.com",
     :user_name            => "workshopmaggiekline@gmail.com",
-    :password             => "",
+    :password             => "Budapest2014",
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
