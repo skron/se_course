@@ -12,7 +12,7 @@
     = f.input :lastname, label: 'Příjmení', required: :true
     %hr
     = f.input :email, required: :true
-    = f.input :phone, label: 'Mobil', :as => :tel, required: :true, placeholder: 'Bez mezer - např. 123456789'
+    = f.input :phone, label: 'Mobil', :as => :tel, required: :true, placeholder: 'Bez mezer - např. 123456789', hint: 'Uvádějte bez mezinárodní předvolby'
     %hr
     = f.input :education, label: 'Vzdělání', required: :true, placeholder: 'VŠ, SŠ, obor ...'
     = f.input :profesion, label: 'Profese', required: :true
