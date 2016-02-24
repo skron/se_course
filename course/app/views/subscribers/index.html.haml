@@ -8,56 +8,60 @@
     %br
 
   .col-md-12
-    %table.table-striped.table-bordered.table
-      %tr
-        %th Titul
-        %th Jméno
-        %th Příjmení
-        %th Email
-        %th Telefon
-        %th Vzdělání
-        %th Profese
-        %th Fakturace
-        %th Ulice
-        %th Město
-        %th PSČ
-        %th IČ
-        %th Intro
-        %th Intro datum
-        %th Výcvik
-        %th Výcvik datum
-        %th Výcvik místo
-        %th Účast
-        %th Datum registrace
-        %th
-        %th
-        %th
-
-      - @subscribers.each do |s|
+    %table#subscribers.table.table-striped.table-bordered.sortable-theme-minimal(data-sortable)
+      %thead
         %tr
-          %td= s.titul
-          %td= s.firstname
-          %td= s.lastname
-          %td= s.email
-          %td= s.phone
-          %td= s.education
-          %td= s.profesion
-          %td= s.nazev
-          %td= s.address
-          %td= s.city
-          %td= s.zip
-          %td= s.ico
-          %td= s.intro
-          %td= s.intro_date
-          %td= s.training
-          %td= s.training_date
-          %td= s.training_place
-          %td= s.participation
-          %td= s.created_at
-          %td= link_to 'Show', s
-          %td= link_to 'Edit', edit_subscriber_path(s)
-          %td= link_to 'Destroy', s, :method => :delete, :data => { :confirm => 'Are you sure?' }
-  
+          %th ID
+          %th Datum registrace
+          %th Titul
+          %th Jméno
+          %th Příjmení
+          %th Email
+          %th Telefon
+          %th Vzdělání
+          %th Profese
+          %th Fakturace
+          %th Ulice
+          %th Město
+          %th PSČ
+          %th IČ
+          %th Intro
+          %th Intro datum
+          %th Výcvik
+          %th Výcvik datum
+          %th Výcvik místo
+          %th Účast
+          %th
+          %th
+          %th
+
+      %tbody
+        - @subscribers.each do |s|
+          %tr
+            %td= s.id
+            %td= s.created_at
+            %td= s.titul
+            %td= s.firstname
+            %td= s.lastname
+            %td= s.email
+            %td= s.phone
+            %td= s.education
+            %td= s.profesion
+            %td= s.nazev
+            %td= s.address
+            %td= s.city
+            %td= s.zip
+            %td= s.ico
+            %td= s.intro
+            %td= s.intro_date
+            %td= s.training
+            %td= s.training_date
+            %td= s.training_place
+            %td= s.participation
+            %td= link_to 'Show', s
+            %td= link_to 'Edit', edit_subscriber_path(s)
+            %td= link_to 'Destroy', s, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
   .col-md-12
     = link_to 'Nová registrace', new_subscriber_path, :class => 'btn btn-default'
     = link_to "Export do CSV", subscribers_path(format: "csv"), :class => 'btn btn-default'
