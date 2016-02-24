@@ -14,5 +14,5 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require sortable.min.js
+//= require sortable
 //= require turbolinks
