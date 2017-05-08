@@ -3,14 +3,60 @@
   = @subscriber.lastname
   \,
   %br
-  děkujeme za Vaši registraci na workshop s Maggie Kline Práce s traumatem u dětí 28.-31.7. 2016 v Praze.
+  děkujeme za Vaši registraci na workshop s Maggie Kline Práce s traumatem u dětí 31.8 - 3.9. 2017 v Praze. Níže Vám posíláme informace k platbě a podmínky účasti.
 
 %p
-  Kurz je již bohužel naplněn, zařazujeme Vás tedy do seznamu náhradníků, a kontaktujeme Vás po 30.4., což je termín pro zaplacení záloh a po tomto termínu budeme mít přehled o počtu míst, která se uvolnila.
+  %strong CENA WORKSHOPU A PLATBY:
+
 %p
-  V PŘÍPADĚ ZÁJMU VÁM NABÍZÍME MOŽNOST ZŮČASTNIT SE JEDNODENNÍHO INTRA, KDE JSOU STÁLE VOLNÁ MÍSTA. POKUD SE CHCETE INTRA ZÚČASTNIT NAPIŠTE NÁM PROSÍM NA TENTO MAIL.
+  = "Zvolili jste variantu: #{@subscriber.participation}"
+  //- a = @subscriber.participation
+  - case @subscriber.participation
+  - when "Intro"
+    =render partial: 'intro'
+  - when "Workshop"
+    =render partial: 'workshop'
+  - when "Intro + workshop"
+    =render partial: 'intro_workshop'
+
 %p
-  Vaše dotazy ke kurzu i platbám směřujte na email workshopmaggiekline@gmail.com.
+  Celé kurzovné nebo příslušnou zálohu zašlete na účet č.:
+  %strong 2500029896/2010
+  nejpozději
+  %strong do 15.6.2017.
+  %br
+  Pokud jste se rozhodli pro platbu zálohy, doplatek kurzovného zašlete na účet č.:
+  %strong 2500029896/2010
+  nejpozději
+  %strong do 15.7. 2017.
+  %br
+  Jako
+  %strong variabilní symbol
+  obou plateb uveďte své
+  %strong telefoní číslo.
+
+%p
+  %strong VĚNUJTE PROSÍME POZORNOST PODMÍNKÁM:
+
+%ol
+  %li
+    %strong Absolvování Intra
+    %br
+    Pro účast na workshopu je povinné absolvování Intra nebo jiná předchozí zkušenost s metodou SE (Intro nebo výcvik).
+  %li
+    %strong Storno podmínky
+    %br
+    Při zrušení účasti po 15.6. 2017 účastníkovi propadá výše zálohy příslušného kurzovného, při zrušení účasti po 9.8.2017 propadá polovina celé částky příslušného kurzovného a při zrušení účasti po 23.8. 2017 je celé kurzovné nevratné.
+    %strong Zrušení workshopu
+    %br
+    Při nedostatečném počtu účastníků si organizátoři vyhrazují právo na zrušení workshopu. Rozhodné datum je stanoveno na 30.6.2017. Pokud by došlo ke zrušení workshopu ze strany organizátorů, vybrané zálohy budou účastníkům vráceny.
+  %li
+    Úplné znění podmínek naleznete na adrese
+    = link_to "www.somaticexperiencing.cz/podminky", "http://www.somaticexperiencing.cz/podminky"
+
+
+%p
+  Podrobnější informace k harmonogramu obdržíte na Váš mail v pozvánce před konáním worksopu. Vaše dotazy ke kurzu i platbám směřujte taktéž na tento mail.
 %p
   Na setkání s Vámi se těší tým organizátorek:
 %p
